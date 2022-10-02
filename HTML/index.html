@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="title">
+          <h1>Simple Pricing!</h1>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            mollitia doloribus fuga neque consequatur harum voluptatibus,
+          </p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h2>BASIC</h2>
+          <div>
+            <div class="subs">
+              <span class="currency">$</span>
+              <span class="price">4</span>
+              <span>/month</span>
+            </div>
+            <hr />
+            <div>
+              <p><span class="number">10</span> Projects</p>
+              <p><span class="number">10</span> Pages</p>
+              <p><span class="number">100</span> MB Disk Space</p>
+              <br />
+              <button hidden id="basicSelected">SELECTED</button>
+              <button id="basic" onclick="Basic()">BUY NOW</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="standard">
+            <span>STANDARD</span>
+            <span>Save 15%</span>
+          </div>
+          <div>
+            <div class="subs">
+              <span class="currency">$</span>
+              <span class="price">8</span>
+              <span>/month</span>
+            </div>
+            <hr />
+            <div>
+              <p><span class="number">20</span> Projects</p>
+              <p><span class="number">20</span> Pages</p>
+              <p><span class="number">200</span> MB Disk Space</p>
+              <br />
+              <button hidden id="standardSelected">SELECTED</button>
+              <button id="standard" onclick="Standard()">BUY NOW</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>ADVANCED</h2>
+          <div>
+            <div class="subs">
+              <span class="currency">$</span>
+              <span class="price">12</span>
+              <span>/month</span>
+            </div>
+            <hr />
+            <div>
+              <p><span class="number">40</span> Projects</p>
+              <p><span class="number">40</span> Pages</p>
+              <p><span class="number">500</span> MB Disk Space</p>
+              <br />
+              <button hidden id="advancedSelected">SELECTED</button>
+              <button id="advanced" onclick="Advanced()">BUY NOW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bot">
+        <div>
+          <div class="FAQ">Frequently Asked Questions</div>
+          <div class="questions">
+            <div>
+              <h3>How does free trial work?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+                asperiores eius amet. Ducimus esse voluptates possimus
+                repudiandae, nulla aliquid,
+              </p>
+            </div>
+            <div>
+              <h3>Can I cancel any time?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate asperiores inventore enim deserunt numquam culpa quod
+                laborum autem ipsam sint.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function Basic() {
+        alert("Success");
+        document.getElementById("basic").hidden = true;
+        document.getElementById("basicSelected").hidden = false;
+        document.getElementById("standard").hidden = false;
+        document.getElementById("standardSelected").hidden = true;
+        document.getElementById("advanced").hidden = false;
+        document.getElementById("advancedSelected").hidden = true;
+      }
+
+      function Standard() {
+        alert("Success");
+        document.getElementById("standard").hidden = true;
+        document.getElementById("standardSelected").hidden = false;
+        document.getElementById("basic").hidden = false;
+        document.getElementById("basicSelected").hidden = true;
+        document.getElementById("advanced").hidden = false;
+        document.getElementById("advancedSelected").hidden = true;
+      }
+
+      function Advanced() {
+        alert("Success");
+        document.getElementById("advanced").hidden = true;
+        document.getElementById("advancedSelected").hidden = false;
+        document.getElementById("basic").hidden = false;
+        document.getElementById("basicSelected").hidden = true;
+        document.getElementById("standard").hidden = false;
+        document.getElementById("standardSelected").hidden = true;
+      }
+    </script>
+  </body>
+</html>
